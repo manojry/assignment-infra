@@ -144,7 +144,7 @@ resource "aws_ecs_service" "api" {
   }
 }
 
-## Add a load balancer to properly distribute traffic to the API service
+## load balancer to properly distribute traffic to the API service
 resource "aws_lb" "api" {
   name               = "docuflow-api-lb"
   internal           = false
