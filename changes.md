@@ -60,3 +60,5 @@ assignment-infra/
 - Restrict ALB security group to known IP ranges
 - Configure cloudwatch alarms for ecs service and rds instance
 - Create IAM role for terraform so that role is used for terraform operations instead of access keys.
+- Use modules instead of resources
+- CICD pipeline for terraform code changes
