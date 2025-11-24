@@ -1,7 +1,7 @@
 variable "aws_region" {
   description = "AWS region to deploy resources"
   type        = string
-  default     = "us-east-1"
+  default     = "eu-west-1"
 }
 
 variable "environment" {
@@ -36,4 +36,19 @@ variable "aws_session_token" {
   type        = string
   default     = null
   sensitive   = true
-} 
+}
+
+variable "allowed_cidr_blocks" {
+  description = "List of allowed CIDR blocks"
+  type        = list(string)
+  default     = [
+    "some-ip-range" ## only ecs ip's are allowed
+  ]
+}
+
+variable "db_admin_username" {
+  description = "Database admin username"
+  type        = string
+ ## pass from cicd secrets like jenkins or github actions
+  sensitive   = true
+}
